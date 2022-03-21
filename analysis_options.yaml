@@ -1,0 +1,48 @@
+include: package:flutter_lints/flutter.yaml
+
+# Tapped definition for a stronger linter, that don't allow code that could be potentially contains bugs like unawaited futures.
+# All lint definitions are listed here: https://dart-lang.github.io/linter/lints/index.html
+
+analyzer:
+  # Generated files by Freezed -> https://pub.dev/packages/freezed
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "lib/generated_plugin_registrant.dart"
+  errors:
+    invalid_annotation_target: ignore
+  language:
+    strict-raw-types: true
+    # https://github.com/dart-lang/language/tree/master/resources/type-system
+    strict-inference: true
+  strong-mode:
+    implicit-casts: false
+    # https://github.com/dart-lang/language/tree/master/resources/type-system
+    implicit-dynamic: false
+
+linter:
+  rules:
+    cancel_subscriptions: true
+    require_trailing_commas: true
+    flutter_style_todos: true
+    always_use_package_imports: true
+    unawaited_futures: true
+    avoid_renaming_method_parameters: true
+    camel_case_extensions: true
+    camel_case_types: true
+    close_sinks: true
+    no_duplicate_case_values: true
+    always_declare_return_types: true
+    avoid_void_async: true
+    sort_pub_dependencies: false # We don't want to sort the dependencies since it's not important for a clean app
+    prefer_final_parameters: true
+    use_key_in_widget_constructors: true
+    no_logic_in_create_state: true
+    avoid_empty_else: true
+    avoid_init_to_null: true
+    avoid_relative_lib_imports: true
+    unnecessary_const: true
+    unnecessary_new: true
+    unnecessary_null_in_if_null_operators: true
+    unrelated_type_equality_checks: true
+    use_rethrow_when_possible: true
