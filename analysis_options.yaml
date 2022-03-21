@@ -11,6 +11,7 @@ analyzer:
     - "lib/generated_plugin_registrant.dart"
   errors:
     invalid_annotation_target: ignore
+    missing_return: error
   language:
     strict-raw-types: true
     # https://github.com/dart-lang/language/tree/master/resources/type-system
@@ -58,3 +59,7 @@ linter:
     prefer_is_not_operator: true
     sized_box_for_whitespace: true
     sort_child_properties_last: true
+    annotate_overrides: true
+    valid_regexps: true
+    unnecessary_null_checks: true
+    
