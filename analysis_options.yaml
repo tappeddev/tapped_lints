@@ -61,4 +61,5 @@ linter:
     annotate_overrides: true
     valid_regexps: true
     unnecessary_null_checks: true
+    avoid_redundant_argument_values: true
     
