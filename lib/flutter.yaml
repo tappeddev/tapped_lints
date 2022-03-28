@@ -1,6 +1,6 @@
 include: package:flutter_lints/flutter.yaml
 
-# Tapped definition for a stronger linter, that don't allow code that could be potentially contains bugs like unawaited futures.
+# Tapped definition for a stronger linter, that don't allow code that could potentially contain bugs like unawaited futures.
 # All lint definitions are listed here: https://dart-lang.github.io/linter/lints/index.html
 
 analyzer:
