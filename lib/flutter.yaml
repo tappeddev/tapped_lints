@@ -9,6 +9,7 @@ analyzer:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
     - "lib/generated_plugin_registrant.dart"
+    - "**/generated/**"
   errors:
     invalid_annotation_target: ignore
     missing_return: error
