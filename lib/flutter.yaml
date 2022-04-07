@@ -6,9 +6,10 @@ include: package:flutter_lints/flutter.yaml
 analyzer:
   # Generated files by Freezed -> https://pub.dev/packages/freezed
   exclude:
-    - "**/*.g.dart"
-    - "**/*.freezed.dart"
-    - "lib/generated_plugin_registrant.dart"
+    - "**.gen.dart"
+    - "**.g.dart"
+    - "**.freezed.dart"
+    - "**/generated_plugin_registrant.dart"
     - "**/generated/**"
   errors:
     invalid_annotation_target: ignore
