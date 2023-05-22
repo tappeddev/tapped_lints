@@ -21,6 +21,12 @@ dev_dependencies:
 include: package:tapped_lints/flutter.yaml
 ```
 
+⚠️ If you are using Flutter 3.10.X or newer, please use the following include: 
+
+```yaml
+include: package:tapped_lints/flutter-3.10.yaml
+```
+
 ⚠️ We need to include flutter_lints to the dev_dependencies otherwise the linter can't find a reference to the module and
 we will get the following error in the `Dart Analysis` tap: `warning: The include file 'package:flutter_lints/flutter.yaml' in '/**/.pub-cache/git/tapped_lints-refnumber/lib/flutter.yaml' can't be found when analyzing '/path/to/module'. (include_file_not_found at [] analysis_options.yaml:1)`
 
