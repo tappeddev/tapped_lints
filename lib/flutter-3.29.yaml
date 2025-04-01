@@ -1,0 +1,62 @@
+include: package:flutter_lints/flutter.yaml
+
+# Tapped definition for a stronger linter, that don't allow code that could potentially contain bugs like unawaited futures.
+# All lint definitions are listed here: https://dart-lang.github.io/linter/lints/index.html
+
+analyzer:
+  # Generated files by Freezed -> https://pub.dev/packages/freezed
+  exclude:
+    - "**.gen.dart"
+    - "**.g.dart"
+    - "**.freezed.dart"
+    - "**/generated_plugin_registrant.dart"
+    - "**/generated/**"
+  errors:
+    invalid_annotation_target: ignore
+    missing_return: error
+  language:
+    strict-raw-types: true
+    # https://github.com/dart-lang/language/tree/master/resources/type-system
+    strict-inference: true
+
+linter:
+  rules:
+    cancel_subscriptions: true
+    # removing this, because dart format and the linter do not work together
+    require_trailing_commas: false
+    flutter_style_todos: true
+    always_use_package_imports: true
+    unawaited_futures: true
+    avoid_renaming_method_parameters: true
+    camel_case_extensions: true
+    camel_case_types: true
+    close_sinks: true
+    no_duplicate_case_values: true
+    always_declare_return_types: true
+    avoid_void_async: true
+    sort_pub_dependencies: false # We don't want to sort the dependencies since it's not important for a clean app
+    use_key_in_widget_constructors: true
+    no_logic_in_create_state: true
+    avoid_empty_else: true
+    avoid_init_to_null: true
+    avoid_relative_lib_imports: true
+    unnecessary_const: true
+    unnecessary_new: true
+    unnecessary_null_in_if_null_operators: true
+    unrelated_type_equality_checks: true
+    use_rethrow_when_possible: true
+    empty_catches: true
+    empty_constructor_bodies: true
+    prefer_iterable_whereType: true
+    prefer_is_empty: true
+    prefer_is_not_empty: true
+    unnecessary_overrides: true
+    file_names: true
+    prefer_final_locals: true
+    prefer_is_not_operator: true
+    sized_box_for_whitespace: true
+    sort_child_properties_last: true
+    annotate_overrides: true
+    valid_regexps: true
+    unnecessary_null_checks: true
+
