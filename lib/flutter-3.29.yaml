@@ -51,14 +51,11 @@ linter:
     use_key_in_widget_constructors: true # Ensure proper widget identity
     no_logic_in_create_state: true # Keep business logic out of state creation
     sort_child_properties_last: true # Improve widget readability
-    avoid_unnecessary_setstate: true # Prevent excessive widget rebuilds
-    diagnostic_describe_all_properties: true # Improve debugging info in widgets
 
     # ✅ Performance & Optimization
     prefer_const_literals_to_create_immutables: true # Reduce unnecessary object creation
     prefer_iterable_whereType: true # Use `.whereType<T>()` for efficiency
     unnecessary_this: true # Avoid redundant `this.` usage
-    unnecessary_lambdas: true # Prefer concise function references
 
     # ✅ Safety & Error Prevention
     annotate_overrides: true # Explicitly mark overridden methods
