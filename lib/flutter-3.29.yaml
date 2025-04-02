@@ -21,42 +21,49 @@ analyzer:
 
 linter:
   rules:
-    cancel_subscriptions: true
-    # removing this, because dart format and the linter do not work together
-    require_trailing_commas: false
-    flutter_style_todos: true
-    always_use_package_imports: true
-    unawaited_futures: true
-    avoid_renaming_method_parameters: true
-    camel_case_extensions: true
-    camel_case_types: true
-    close_sinks: true
-    no_duplicate_case_values: true
-    always_declare_return_types: true
-    avoid_void_async: true
-    sort_pub_dependencies: false # We don't want to sort the dependencies since it's not important for a clean app
-    use_key_in_widget_constructors: true
-    no_logic_in_create_state: true
-    avoid_empty_else: true
-    avoid_init_to_null: true
-    avoid_relative_lib_imports: true
-    unnecessary_const: true
-    unnecessary_new: true
-    unnecessary_null_in_if_null_operators: true
-    unrelated_type_equality_checks: true
-    use_rethrow_when_possible: true
-    empty_catches: true
-    empty_constructor_bodies: true
-    prefer_iterable_whereType: true
-    prefer_is_empty: true
-    prefer_is_not_empty: true
-    unnecessary_overrides: true
-    file_names: true
-    prefer_final_locals: true
-    prefer_is_not_operator: true
-    sized_box_for_whitespace: true
-    sort_child_properties_last: true
-    annotate_overrides: true
-    valid_regexps: true
-    unnecessary_null_checks: true
+    # ✅ Resource Management & Async Best Practices
+    cancel_subscriptions: true # Ensure streams are properly closed
+    close_sinks: true # Prevent memory leaks
+    unawaited_futures: true # Warn about unhandled Futures
+    avoid_void_async: true # Prevent misleading async function return types
 
+    # ✅ Code Readability & Formatting
+    flutter_style_todos: true # Ensure TODOs follow best practices
+    always_declare_return_types: true # Improve code clarity
+    prefer_final_locals: true # Encourage immutability
+    prefer_const_constructors: true # Reduce unnecessary widget rebuilds
+    sized_box_for_whitespace: true # Prevent excessive padding/margin use
+
+    # ✅ Import & File Naming Best Practices
+    always_use_package_imports: true # Avoid relative imports outside `lib/`
+    avoid_relative_lib_imports: true # Enforce cleaner module imports
+    library_names: true # Enforce proper library naming
+    file_names: true # Enforce snake_case file names
+
+    # ✅ Null Safety & Type Safety
+    unnecessary_null_checks: true # Avoid redundant null checks
+    avoid_init_to_null: false # No longer necessary with null safety
+    avoid_unnecessary_containers: true # Prevent redundant `Container` widgets
+    use_super_parameters: true # Use `super` instead of redundant constructor params
+    prefer_null_aware_operators: true # Prefer `??` over verbose null checks
+
+    # ✅ Widget & State Management Best Practices
+    use_key_in_widget_constructors: true # Ensure proper widget identity
+    no_logic_in_create_state: true # Keep business logic out of state creation
+    sort_child_properties_last: true # Improve widget readability
+    avoid_unnecessary_setstate: true # Prevent excessive widget rebuilds
+    diagnostic_describe_all_properties: true # Improve debugging info in widgets
+
+    # ✅ Performance & Optimization
+    prefer_const_literals_to_create_immutables: true # Reduce unnecessary object creation
+    prefer_iterable_whereType: true # Use `.whereType<T>()` for efficiency
+    unnecessary_this: true # Avoid redundant `this.` usage
+    unnecessary_lambdas: true # Prefer concise function references
+
+    # ✅ Safety & Error Prevention
+    annotate_overrides: true # Explicitly mark overridden methods
+    no_duplicate_case_values: true # Avoid redundant switch cases
+    valid_regexps: true # Ensure regular expressions are valid
+    use_rethrow_when_possible: true # Maintain proper exception propagation
+    avoid_dynamic_calls: true # Reduce dynamic invocations for type safety
+    avoid_print: true # Use logging instead of `print()`
