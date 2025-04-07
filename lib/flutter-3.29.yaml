@@ -64,3 +64,4 @@ linter:
     use_rethrow_when_possible: true # Maintain proper exception propagation
     avoid_dynamic_calls: true # Reduce dynamic invocations for type safety
     avoid_print: true # Use logging instead of `print()`
+    avoid_renaming_method_parameters: true # Avoid changing names in overrides
